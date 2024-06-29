@@ -27,6 +27,7 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
+    box-shadow: inset 10px 0 20px #191919;
 }
 
 .content{
@@ -124,7 +125,7 @@ nav ul li a{
     padding: 10px 30px;
     color: rgb(21, 74, 74);
     /* background-color:rgb(164, 44, 44); */
-    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4), inset -5px -10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 10px #000000ed, inset -2px -2px 10px #000000ed;
     background-color: rgba(255, 255, 255, 0.947);
     border-radius: 20px;
     text-decoration: none;
@@ -359,6 +360,7 @@ nav ul li a{
     top: 6px;
     right: 6px;
     transition: ease 0.30s;
+    box-shadow: 1px 1px 10px #353434, inset -1px -1px 10px #353434;
 }
 
 .newsletter form input:last-child:hover{
@@ -478,9 +480,16 @@ nav ul li a{
     color: white;
     margin-bottom: 20px;
     letter-spacing: 1px;
+    text-shadow: 2px 2px 10px #000000ed;
 }
 
 .abt-text h1 span{
+    color: rgb(32, 101, 101);
+    letter-spacing: 1px;
+}
+.abt-text h2{
+    font-size: 45px;
+    font-weight: 500;
     color: rgb(32, 101, 101);
     letter-spacing: 1px;
 }
@@ -488,20 +497,56 @@ nav ul li a{
 .abt-text p{
     color: white;
     font-size: 24px;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     line-height: 30px;
     letter-spacing: 1px;
 }
 
 .main{
-    width: 1130px;
     max-width: 95%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    margin: 150px 160px;
+    margin-bottom: -100px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
+.team h2{
+    font-size: 45px;
+    font-weight: 600;
+    color: rgb(32, 101, 101);
+    letter-spacing: 1px;
+    left: 100px;
+}
+.team-member {
+    margin: 20px;
+    padding: 20px;
+    background-color: #206565;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4), inset -10px -10px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    border-radius: 30px ;
+    margin-bottom: 50px;
+    margin-top: 60px;
+}
+.team-member:hover{
+    box-sizing: inset -10px -10px 10px rgba(0, 0, 0, 0.4), 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+.team-member img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+.team-member h3{
+    font-size: 30px;
+    font-weight: 600;
+}
+.team-member p{
+    font-size: 25px;
+    font-weight: 400;
+}
 .connectbtn{
     display: inline-block;
     background-color: rgb(32, 101, 101);
@@ -567,7 +612,7 @@ nav ul li a{
 }
 
 .contact-form h1 span{
-    color:#fc0050;
+    color:rgb(32, 101, 101);
 }
 
 .contact-form p{
@@ -593,7 +638,7 @@ nav ul li a{
 
 .contact-form form .submit-btn{
     display: inline-block;
-    background-color: #fc0050;
+    background-color: rgb(32, 101, 101);
     font-size: 27px;
     font-weight: 600px;
     border: 2px solid transparent;
@@ -601,11 +646,12 @@ nav ul li a{
     width: 220px;
     cursor: pointer;
     transition: ease 0.30s;
+    box-shadow: 2px 2px 10px #000000ed, inset -2px -2px 10px #000000ed;
 
 }
 
 .contact-form form .submit-btn:hover{
-    border: 2px solid #fc0050;
+    border: 2px solid rgb(32, 101, 101);
     background-color: transparent;
     transform: scale(1.1);
 
@@ -661,7 +707,7 @@ nav ul li a{
 
 .register-form .sbt{
     display: inline-block;
-    background-color: #10aab5;
+    background-color: rgb(32, 101, 101);
     font-size: 27px;
     font-weight: 600px;
     border: 2px solid transparent;
@@ -669,7 +715,7 @@ nav ul li a{
     width: 220px;
     cursor: pointer;
     transition: ease 0.30s;
-    box-shadow: 5px 5px 8px #3c3c3c68, inset -5px -5px 8px #3c3c3c68;
+    box-shadow: 2px 2px 10px #000000ed, inset -2px -2px 10px #000000ed;
 }
 
 .register-form form .sbt:hover{
@@ -732,13 +778,13 @@ nav ul li a{
     font-size: 22px;
     font-weight: 500;
     margin-top: 20px;
-    color: #fc0050;
+    color: rgb(32, 101, 101);
 }
 
 
 .register-form form .submitbtn{
     display: inline-block;
-    background-color: #fc0050;
+    background-color: rgb(32, 101, 101);
     font-size: 27px;
     font-weight: 600px;
     border: 2px solid transparent;
@@ -746,10 +792,11 @@ nav ul li a{
     width: 220px;
     cursor: pointer;
     transition: ease 0.30s;
+    box-shadow: 2px 2px 10px #000000ed, inset -2px -2px 10px #000000ed;
 }
 
 .register-form form .submitbtn:hover{
-    border: 2px solid #fc0050;
+    border: 2px solid rgb(32, 101, 101);
     background-color: transparent;
     transform: scale(1.1);
 }
