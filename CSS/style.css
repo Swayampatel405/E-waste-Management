@@ -43,7 +43,7 @@
 nav{
     width: 100%;
     position: fixed;
-    backdrop-filter: blur(10px);
+    background-color: transparent;
     background-image: linear-gradient(rgba(34, 9, 133, 0.2),rgba(11, 8, 24, 0.3));
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 15%);
     display: flex;
@@ -97,7 +97,7 @@ nav ul li a{
 .title{
     text-decoration: none;
     /* display: inline-block; */
-    font-size: 4vh;
+    font-size: 3vh;
     color: rgb(255, 255, 255);
     padding: 14px 17px;
     margin-top: 32vh;
@@ -106,14 +106,14 @@ nav ul li a{
 }
 
 .title h1{
-    font-size: 10vh;
-    text-shadow: 2px black;
+    font-size: 9vh;
+    text-shadow: 5px 10px 10px rgb(0, 0, 0);
     transition: ease 0.3s;
 }
 
 .title h1:hover{
     color:transparent;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.791);
     
 }
 
@@ -124,24 +124,25 @@ nav ul li a{
     padding: 10px 30px;
     color: rgb(21, 74, 74);
     /* background-color:rgb(164, 44, 44); */
-    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);
-    background-color: white;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4), inset -5px -10px 30px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.947);
     border-radius: 20px;
     text-decoration: none;
     transition: ease 0.30s;
 }
 
 .button:hover{
-    transform: scale(1.1);
-
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    color: #dddddd;
 }
 
 
 .text h2{
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 650;
     margin-top: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     line-height: 2;
     text-align: center;
 }
@@ -159,6 +160,8 @@ nav ul li a{
 .container-box{
     border-radius: 5px;
     padding: 50px 10px;
+    margin: 10px;
+    margin-top: -15px;
     transition: all 0.7s ease 0s;
 }
 
@@ -166,16 +169,30 @@ nav ul li a{
 .container-box h4{
     font-size: 20px;
     margin-bottom: 5px;
+    margin-left: 70px;
+    margin-right: 70px;
     font-weight: 500;
+    text-align: left;
 }
+.container-box .exp{
+    font-size: 35px;
+    margin-bottom: 5px;
+    margin-left: 65px;
+    margin-right: 50px;
+    font-weight: 600;
+    text-align: left;
+    color: #056ac8;
+}
+
 .container-box h4 span{
-    color: #fc0050;
+    color: #056ac8;
     font-weight:600;
 }
 .container-box img{
-    width: auto;
+    width: 500px;
     height: 400px;
-    padding: 20px;
+    margin: 10px 30px;
+    box-shadow: 5px 5px 10px #101010a0;
 }
 
 
@@ -186,16 +203,45 @@ nav ul li a{
     border-radius: 0px;
 }
 
-
+.container{
+    border-radius: 5px;
+    padding: 50px 10px;
+    margin: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: -15px;
+    transition: all 0.7s ease 0s;
+}
+.container h3{
+    color: #056ac8;
+    font-size: 20px;
+    font-weight:600;
+}
+.container li ul p strong{
+    color: #c85905;
+    font-weight:550;
+}
+.container li ul p {
+    font-size: 18px;
+    font-weight:450;
+}
+.container h2{
+    color: #000000ed;
+    font-weight: 600;
+    font-size: 35px;
+    margin-left: -7px;
+    margin-right: 70px;
+}
 
 .fwm-title{
     text-align: center;
+    margin-top: -20px;
 }
 
 .fwm-title h2{
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 650;
-    padding-top: 75px;
+    padding-top: 55px;
     padding-bottom: 10px;
     line-height: 2;
 }
@@ -435,7 +481,7 @@ nav ul li a{
 }
 
 .abt-text h1 span{
-    color: #fc0050;
+    color: rgb(32, 101, 101);
     letter-spacing: 1px;
 }
 
@@ -458,7 +504,8 @@ nav ul li a{
 
 .connectbtn{
     display: inline-block;
-    background-color: #fc0050;
+    background-color: rgb(32, 101, 101);
+    box-shadow: 2px 2px 10px #000000ed, inset -2px -2px 10px #000000ed;
     font-size: 18px;
     color: white;
     font-weight: bold;
@@ -471,7 +518,7 @@ nav ul li a{
 
 .connectbtn:hover{
     background-color: transparent;
-    border: 2px solid #fc0050;
+    border: 2px solid rgb(32, 101, 101);
     transform: scale(1.1);
 }
 
@@ -585,7 +632,7 @@ nav ul li a{
     margin-bottom: 20px;
 }
 .register-form h1 span{
-    color: rgb(32, 101, 101);
+    color: #206565;
 }
 
 .register-form{
@@ -604,17 +651,17 @@ nav ul li a{
     margin-bottom: 20px;
     
 }
-.register-form h4{
+.register-form .form-h4{
     font-size: 22px;
     font-weight: 500;
     margin-top: 20px;
-    color: #fc0050;
+    color: #08bcbc;
 }
 
 
-.register-form form .submitbtn{
+.register-form .sbt{
     display: inline-block;
-    background-color: #fc0050;
+    background-color: #10aab5;
     font-size: 27px;
     font-weight: 600px;
     border: 2px solid transparent;
@@ -622,10 +669,11 @@ nav ul li a{
     width: 220px;
     cursor: pointer;
     transition: ease 0.30s;
+    box-shadow: 5px 5px 8px #3c3c3c68, inset -5px -5px 8px #3c3c3c68;
 }
 
-.register-form form .submitbtn:hover{
-    border: 2px solid #fc0050;
+.register-form form .sbt:hover{
+    border: 2px solid #206565;
     background-color: transparent;
     transform: scale(1.1);
 }
