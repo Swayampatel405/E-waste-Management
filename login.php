@@ -1,3 +1,32 @@
+<?php
+require 'config.php';
+if(!empty($_SESSION["id"])){
+    header("Location : index.php");
+}
+  if(isset($_POST["submit"])){
+   $name = $_POST["name"];
+   $email = $_POST["email"];
+   $mobileno = $_POST["mobileno"];
+   $password = $_POST["password"];
+   $result = mysqli_query($conn,"SELECT * FROM tb_user WHERE email = '$email'");
+   $row = mysqli_fetch_assoc($result);
+   if(mysqli_num_rows($result) > 0){
+     if($password == $row["password"]){
+        $_SESSION["login"] = true;
+        $_SESSION["id"]= $row["id"];
+        header("Location:");
+     }
+     else{
+        echo
+        "<script> alert('Wrong Password');</script>";
+     }
+   }
+   else{
+    echo
+        "<script> alert('User Not Registered');</script>";
+   }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,11 +50,12 @@
         <ul class="navbar">
             <li>
                 <a href="./index.html">Home</a>
+                
                 <a href="./register.html">Get Involved</a>
                 <a href="./about.html">About Us</a>
                 <a href="./contact.html">Contact Us</a>
-                <a href="./registration.html">Registration</a>
-                <a href="./login.html">Login</a>
+                <a href="./registration.php">Registration</a>
+                <a href="./login.php">Login</a>
 
             </li>
         </ul>
@@ -33,15 +63,12 @@
 
     <section class="registration">
         <div class="register-form">
-            <h1>Registration</h1>
+            <h1>Login</h1>
             
             <form action="" onsubmit="return validateform()">
 
-            <input type="text" name="myname1" placeholder="Your Name" id="name" required><br>
             <input type="email" name="myemail" placeholder="Your Email" id="" required><br>
-            <input type="tel" name="myphone" placeholder="Your Phone No." id="phonenum" required><br>
             <input type="password" name="password" placeholder="Enter Password" id="password" required><br>
-            <input type="password" name="password" placeholder="Confirm Password" id="password" required><br>
         
             <br><br>
             <input type="checkbox" name="t&c" id="" checked required> I accept the Terms & Conditions.
@@ -49,6 +76,7 @@
             <input type="submit" value="Submit" class="submitbtn">
 
         </form>
+        <p>Don't have account? <a href="registration.php">Register Now</a></p>
         </div>
     </section>
 
@@ -64,8 +92,8 @@
                     <li><a href="./register.html">Donate</a></li>
                     <li><a href="./about.html">About Us</a></li>
                     <li><a href="./contact.html">Contact Us</a></li>
-                    <li><a href="./registration.html">Registration</a></li>
-                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./registration.php">Registration</a></li>
+                    <li><a href="./login.php">Login</a></li>
 
                 </ul>
             </div>
